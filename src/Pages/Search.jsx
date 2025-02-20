@@ -6,13 +6,13 @@ import './Search.css'
 export default function Search() {
     const [search, setSearch] = useState("")
     const [searchedUrl, setsearchedUrl] = useState([])
-    const [clicked, setClicked] = useState(false)
+    const [selectedcopy, setSelectedcopy] = useState()
+    const [searchlength, setSearchlength] = useState(false)
 
   //Load stored URLs from localStorage when component mounts
   useEffect(()=> {
     const storedURL = JSON.parse(localStorage.getItem("shortenedURL")) || [];
     setsearchedUrl(storedURL)
-    setClicked(false)
   }, [])
 
   //save updatedURL to localstorage
@@ -24,7 +24,6 @@ export default function Search() {
   const handleshortening = async () => {
     if(!search.trim()) {
       alert("Link cannot be empty nor invalid format")
-      setSearch("")
       return;} //checks of the search is empty and stops from running if it is empty
 
     try{
@@ -39,9 +38,9 @@ export default function Search() {
           }
         }
       )
-      const indsearchedUrl = response.data.data.tiny_url;
+      const searchedUrl = response.data.data.tiny_url;
 
-      const searchingURL = { oldURL: search, newURL: indsearchedUrl } 
+      const searchingURL = { oldURL: search, newURL: searchedUrl } 
       
       setsearchedUrl((prev) => {
         const updated =  [ ...prev, searchingURL];
@@ -58,10 +57,15 @@ export default function Search() {
 
     //handling submitting to get a shortened URL
     const handleSubmit = () => {
-
-        console.log(searchedUrl)
-        handleshortening();
-        
+        if(search.length < 7) {
+          setSearchlength(true);
+          return;
+        } else {
+          setSearchlength(false)
+          console.log(searchedUrl)
+          handleshortening();
+        }
+     
     }
 
     //handling Deleting a URL
@@ -72,14 +76,18 @@ export default function Search() {
     }
 
     //handling copying to the clipboard
-    const copytoClipboard = (url) => {
+    const copytoClipboard = (url, index) => {
       navigator.clipboard.writeText(url)
-      .then(() => alert("Copied to Clipboard"))
+      .then(() => {
+        alert("Text copied successfully")
+        setSelectedcopy(index)
+      }
+      )
       .catch((error) => {
         alert("Failed to copy")
         console.error("Failed to copy;", error)
       })
-      setClicked(true)
+      
     }
 
   return (
@@ -89,14 +97,14 @@ export default function Search() {
           <input type='text' placeholder='Shorten a link here...' onChange={(e) => setSearch(e.target.value)} value={search}  />
           <button onClick={()=> handleSubmit()} > Shorten it! </button>
         </div>
-        <p className='noerrortext' > Please add a link </p>
+        <p className={searchlength? "errortext" : 'noerrortext'} > Please add a link </p>
       </div>
       {searchedUrl.map((searchedUrl, index) => (
         <div className='Searchedcontent' key={index}>
           <p className='search'> {searchedUrl.oldURL} </p>
           <div className='searchandbutton'>
           <p> {searchedUrl.newURL} </p>
-          <button className={clicked? "copied" : "copy"} onClick={() => copytoClipboard(searchedUrl.newURL)}> {clicked? "copied" : "copy"} </button>
+          <button className={index === selectedcopy? "copied" : "copy"} onClick={() => copytoClipboard(searchedUrl.newURL, index)}> {index === selectedcopy? "Copied" : "Copy"} </button>
           <MdDeleteForever size={34} onClick={() => handleDelete(index)} className='delete' />
         </div>
       </div>

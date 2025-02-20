@@ -85,6 +85,9 @@
     justify-content: space-evenly;
     /* border: 3px solid; */
 }
+.searchandbutton p{
+    color: rgb(42, 207, 207);
+}
 
 .copy{
     color: white;
