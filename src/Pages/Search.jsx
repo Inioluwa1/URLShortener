@@ -103,9 +103,11 @@ export default function Search() {
         <div className='Searchedcontent' key={index}>
           <p className='search'> {searchedUrl.oldURL} </p>
           <div className='searchandbutton'>
-          <p> {searchedUrl.newURL} </p>
-          <button className={index === selectedcopy? "copied" : "copy"} onClick={() => copytoClipboard(searchedUrl.newURL, index)}> {index === selectedcopy? "Copied" : "Copy"} </button>
-          <MdDeleteForever size={34} onClick={() => handleDelete(index)} className='delete' />
+            <p className='searched'> {searchedUrl.newURL} </p>
+            <div className='buttonanddelete'> 
+              <button className={index === selectedcopy? "copied" : "copy"} onClick={() => copytoClipboard(searchedUrl.newURL, index)}> {index === selectedcopy? "Copied" : "Copy"} </button>
+              <MdDeleteForever size={34} onClick={() => handleDelete(index)} className='delete' />
+            </div>
         </div>
       </div>
       ))}

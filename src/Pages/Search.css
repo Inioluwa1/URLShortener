@@ -75,18 +75,28 @@
     margin-bottom: 1%;
 }
 .search{
-    width: 60%;
+    width: 58%;
     /* border: 3px solid; */
 }
 .searchandbutton{
     display: flex;
-    width: 35%;
+    width: 40%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     /* border: 3px solid; */
 }
-.searchandbutton p{
+.searched{
     color: rgb(42, 207, 207);
+    width: auto;
+    margin-right: 2%;
+    /* border: 6px solid */
+}
+.buttonanddelete{
+    width: 100%;
+    display: flex;
+    /* border: 3px solid; */
+    align-items: center;
+    justify-content: space-around
 }
 
 .copy{
@@ -98,7 +108,7 @@
     padding: 1%;
     font-size: 1.4rem;
     cursor: pointer;
-    width: 30%;
+    width: 70%;
 }
 .copy:hover{
     background-color: rgba(42, 207, 207, 0.4);
@@ -111,7 +121,7 @@
     background-color: rgb(53, 50, 62);
     font-size: 1.4rem;
     cursor: pointer;
-    width: 30%;
+    width: 70%;
     padding: 1%;
 }
 
@@ -134,18 +144,56 @@
         background-position: center;
         height: auto;
     }
+    .inputandbutton{
+        flex-direction: column;
+        width: 100%;
+    }
     .Searching input{
         width: 90%;
         margin: 5% auto;
         padding: 3%;
         height: 60px;
+        font-size: 1.4rem;
     }
     .Searching button{
         width: 90%;
         margin: auto;
         padding: 3%;
-        font-size: 2rem;
+        font-size: 1.4rem;
         height: 60px;
         margin-bottom: 5%;
+    }
+    .errortext{
+        margin-bottom: 2%;
+        width: 90%;
+    }
+    .Searchedcontent{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 3px solid; */
+        padding: 0;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 5%;
+    }
+    .search{
+        /* border: 3px solid; */
+        width: 100%;
+    }
+    .searchandbutton{
+        flex-direction: column;
+        /* border: 3px solid; */
+        margin-top: 2%;
+        width: 80%;
+    }
+    .searched{
+        margin: 0;
+    }
+    .buttonanddelete{
+        margin-top: 2%;
+    }
+    .copy {
+        width: 70%;
     }
 }
