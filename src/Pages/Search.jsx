@@ -38,7 +38,8 @@ export default function Search() {
           }
         }
       )
-      const searchedUrl = response.data.data.tiny_url;
+      
+      const searchedUrl = response?.data?.data?.tiny_url;
 
       const searchingURL = { oldURL: search, newURL: searchedUrl } 
       
