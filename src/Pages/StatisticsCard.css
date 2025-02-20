@@ -1,0 +1,173 @@
+.StatisticsCardContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
+
+.StatisticsCard{
+    width: 30%;
+    /* border: 1px solid green; */
+    background-color: white;
+    padding: 2%;
+}
+.StatisticsCard2{
+    width: 30%;
+    /* border: 1px solid green; */
+    background-color: white;
+    padding: 2%;
+    margin-top: 5%;
+}
+.StatisticsCard3{
+    width: 30%;
+    /* border: 1px solid green; */
+    background-color: white;
+    padding: 2%;
+    margin-top: 10%;
+}
+
+.image{
+    background-color:rgb(53, 50, 62);
+    padding: 5%;
+    border-radius: 50%;
+    position: relative;
+    bottom: 70px;
+    width: 20%;
+}
+
+.StatisticsCard h1{
+    margin-top: -10%;
+    /* border: 1px solid; */
+    font-size: 2.4rem;
+    margin-bottom: 5%;
+}
+.StatisticsCard2 h1{
+    margin-top: -10%;
+    /* border: 1px solid; */
+    font-size: 2.4rem;
+    margin-bottom: 5%;
+}
+.StatisticsCard3 h1{
+    margin-top: -10%;
+    /* border: 1px solid; */
+    font-size: 2.4rem;
+    margin-bottom: 5%;
+}
+
+.StatisticsCard p{
+    /* border: 1px solid; */
+    font-size: 1.4rem;
+    color: rgb(158, 154, 167);
+}
+.StatisticsCard2 p{
+    /* border: 1px solid; */
+    font-size: 1.4rem;
+    color: rgb(158, 154, 167);
+}
+.StatisticsCard3 p{
+    /* border: 1px solid; */
+    font-size: 1.4rem;
+    color: rgb(158, 154, 167);
+}
+
+.divider{
+    height: 10px;
+    background-color:hsl(180, 66%, 49%);
+    width: 19%;
+    position: relative;
+    left: 108%;
+    bottom: 100px;
+}
+
+.divider2{
+    height: 10px;
+    background-color:hsl(180, 66%, 49%);
+    width: 19%;
+    position: relative;
+    left: 108%;
+    bottom: 150px;
+}
+
+
+@media screen and (max-width: 450px) {
+.StatisticsCardContainer{
+    flex-direction: column;
+    margin-top: 15%;
+}
+.StatisticsCard{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20%;
+}
+.StatisticsCard2{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20%;
+}
+.StatisticsCard3{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20%;
+}
+.image{
+    bottom: 40px;
+}
+.StatisticsCard h1{
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+    /* border: 1px solid; */
+}
+.StatisticsCard2 h1{
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+    /* border: 1px solid; */
+}
+.StatisticsCard3 h1{
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+    /* border: 1px solid; */
+}
+.StatisticsCard p{
+    font-size: 1.5rem;
+    width: 95%;
+    text-align: center;
+}
+.StatisticsCard2 p{
+    font-size: 1.5rem;
+    width: 95%;
+    text-align: center;
+}
+.StatisticsCard3 p{
+    font-size: 1.5rem;
+    width: 95%;
+    text-align: center;
+    margin-bottom: 15%;
+}
+.divider{
+    width: 10px;
+    height: 60px;
+    position: relative;
+    left: 0;
+    top: 70px;
+}
+.divider2{
+    width: 10px;
+    height: 80px;
+    position: relative;
+    left: 0;
+    top: 90px;
+}
+
+
+}

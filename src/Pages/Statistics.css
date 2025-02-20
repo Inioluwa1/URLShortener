@@ -1,0 +1,37 @@
+.Statisticscontainer{
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid green; */
+    height: auto;
+}
+.HeaderandContent{
+    text-align: center;
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: auto;
+}
+.HeaderandContent h1{
+    font-size: 3rem;
+    color:rgb(35, 33, 39);
+    margin-bottom: 2%;
+}
+.HeaderandContent p{
+    font-size: 1.4rem;
+    color: hsl(257, 7%, 63%);
+}
+
+.StatisticsImage{
+
+}
+
+@media screen and (max-width: 450px) {
+.HeaderandContent{
+    width: 100%;
+}
+.HeaderandContent h1{
+    font-size: 2rem;
+}
+.HeaderandContent p{
+    font-size: 1.3rem;
+}
+}

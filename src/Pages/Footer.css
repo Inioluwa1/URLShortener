@@ -1,0 +1,187 @@
+.footerContainer{
+    height: auto;
+    /* border: 1px solid green; */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.boostLinks{
+    height: auto;
+    background-image: url('/assets/bg-boost-desktop.svg');
+    background-size: cover;
+    background-color: rgb(59, 48, 84);
+    /* border: 1px solid yellow; */
+    padding: 2% 3%;
+    color: rgb(222, 211, 211);
+    display: flex;
+}
+.noteandbutton{
+    /* border: 1px solid red; */
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boostLinks h1{
+    font-size: 3rem;
+    margin: 0;
+}
+.boostLinks button{
+    padding: 3%;
+    color: rgb(222, 211, 211);
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(42, 207, 207);
+    width: 30%;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 3%;
+}
+.boostLinks button:hover{
+    background-color: rgba(42, 207, 207, 0.4);
+}
+
+.linkContainer{
+    height: auto;
+    /* background-color: red; */
+    margin: 0;
+    /* border: 1px solid brown; */
+    background-color: rgb(35, 33, 39);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.Shortly{
+    /* display: none; */
+    height: 35vh;
+    color: rgb(222, 211, 211);
+    margin: 0 5%;
+}
+
+.features{
+    /* border: 1px solid green; */
+    height: 35vh;
+    width: 15%;
+    text-align: left;
+    color: rgb(222, 211, 211);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.features h1{
+    margin: 0;   
+}
+.linkContainer h2{
+    cursor: pointer;
+}
+.linkContainer h2:hover{
+    color: rgb(42, 207, 207);
+}
+
+.resources{
+    /* border: 1px solid green; */
+    height: 35vh;
+    width: 15%;
+    text-align: left;
+    color: rgb(222, 211, 211);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.resources h1{
+    margin: 0;
+}
+
+.company{
+    /* border: 1px solid green; */
+    height: 35vh;
+    width: 15%;
+    text-align: left;
+    color: rgb(222, 211, 211);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.company h1{
+    margin: 0;
+
+}
+
+.socials{
+    /* border: 1px solid green; */
+    height: 35vh;
+    width: 15%;
+    display: flex;
+    align-items:baseline;
+    justify-content: space-around;
+}
+.socials img{
+    margin: 10px;
+    cursor: pointer;
+}
+.social img:hover{
+    background-color: rgb(42, 207, 207);;
+}
+
+@media screen and (max-width: 450px) {
+    .footerContainer{
+        position: relative;
+        bottom: 0;
+    }
+
+    .boostLinks{
+        height: auto;
+        background-image: url('/public/assets/bg-boost-mobile.svg');
+        background-size: cover;
+        padding: 10% 0;
+    }
+    .noteandbutton{
+        width: 90%;
+        margin: auto;
+        padding: 4%;
+    }
+    .boostLinks h1{
+        font-size: 1.5rem;
+    }
+    .boostLinks button{
+        width: 50%;
+        margin-top: 5%;
+    }
+    .linkContainer{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10% 0;
+    }
+    .Shortly{
+        color: rgb(222, 211, 211);
+        font-size: 3rem;
+        height: auto;
+        margin-bottom: 8%;
+        /* border: 1px solid yellow; */
+        /* margin-bottom: 15%; */
+    }
+    .features, .resources, .company, .socials{
+        width: 90%;
+        height: auto;
+        text-align: center;
+        margin: 2% 0;
+        /* border: 1px solid green; */
+    }
+    .features h1, .resources h1, .company h1, .socials{
+        margin-bottom: 5%;
+    }
+    .features h2, .resources h2, .company h2, .socials{
+        font-weight: 200;
+        margin-bottom: 5%;
+    }
+}

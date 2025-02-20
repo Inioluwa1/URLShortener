@@ -1,0 +1,33 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0;
+  padding: 0;
+  /* text-align: center; */
+  width: 100%;
+  height: auto;
+  /* border: 3px solid green; */
+}
+.OtherColour{
+  background-color: rgba(191, 191, 191, 0.5);
+}
+.Search{
+  margin-top: 7%;
+  position: relative;
+  top: -90px;
+  /* border: 4px solid yellow; */
+}
+
+
+@media screen and (max-width: 450px) {
+  #root{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .Search{
+    margin-top: 5%;
+    position: relative;
+    top: -110px;
+    /* border: 4px solid yellow; */
+  }
+}

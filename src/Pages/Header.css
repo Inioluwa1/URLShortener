@@ -1,0 +1,43 @@
+.linkcontainer{
+    width: 90%;
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid blue; */
+}
+.linkcontainer h2{
+    cursor: pointer;
+    color: rgb(191, 191, 191);
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50% 
+}
+.links img {
+    width: 20%;
+    height: 20%;
+}
+.links h2:hover{
+    color: black;
+}
+
+.checkin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    text-transform: capitalize;
+}
+
+.checkin h2:hover{
+    color: white;
+    background-color: hsl(180, 66%, 49%);
+    padding: 3% 0;
+    border-radius: 40px;
+    width: 50%;
+    text-align: center;
+}

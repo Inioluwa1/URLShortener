@@ -1,0 +1,148 @@
+.Searchcontainer{
+    width: 90%;
+    /* border: 1px solid green; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+.Searching{
+    width: 100%;
+    /* border: 1px solid yellow; */
+    background-image: url('/public/assets/bg-shorten-desktop.svg');
+    background-position: cover;
+    background-color: rgb(59, 48, 84);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5% 0;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+.inputandbutton{
+    display: flex;
+    width: 70%;
+    /* border: 3px solid; */
+}
+.Searching input{
+    width: 80%;
+    padding: 2%;
+    border-radius: 10px;
+    border: none;
+    font-size: 2rem;
+    background-color: white;
+    margin-right: 1%;
+    color: black;
+}
+.Searching button{
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(42, 207, 207);
+    padding: 2%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    width: 20%;
+}
+.Searching button:hover{
+    background-color: rgba(42, 207, 207, 0.4);
+}
+.errortext{
+    /* border: 1px solid; */
+    width: 70%;
+    font-size: 1.4rem;
+    color: rgb(255, 0, 0);
+    font-style: italic;
+    font-weight: 200;
+}
+.noerrortext{
+    display: none;
+}
+
+.Searchedcontent{
+    width: 100%;
+    background-color: white;
+    /* border: 3px solid; */
+    border-radius: 10px;
+    padding: 1%;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1%;
+}
+.search{
+    width: 60%;
+    /* border: 3px solid; */
+}
+.searchandbutton{
+    display: flex;
+    width: 35%;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 3px solid; */
+}
+
+.copy{
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(42, 207, 207);
+    padding: 1%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    width: 30%;
+}
+.copy:hover{
+    background-color: rgba(42, 207, 207, 0.4);
+}
+.copied{
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(53, 50, 62);
+    font-size: 1.4rem;
+    cursor: pointer;
+    width: 30%;
+    padding: 0% 1%;
+}
+
+.delete{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.delete:hover{
+    color: red;
+}
+
+@media screen and (max-width:450px) {
+    .Searchcontainer{
+        width: 90%
+    }
+    .Searching{
+        flex-direction: column;
+        background-image: url('/public/assets/bg-shorten-mobile.svg');
+        background-size: cover;
+        background-position: center;
+        height: auto;
+    }
+    .Searching input{
+        width: 90%;
+        margin: 5% auto;
+        padding: 3%;
+        height: 60px;
+    }
+    .Searching button{
+        width: 90%;
+        margin: auto;
+        padding: 3%;
+        font-size: 2rem;
+        height: 60px;
+        margin-bottom: 5%;
+    }
+}
