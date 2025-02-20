@@ -1,5 +1,5 @@
 import Header from './Pages/Header'
-import Main from './Pages/main'
+import Main from './Pages/Main'
 import Search from './Pages/Search'
 import Statistics from './Pages/Statistics'
 import Footer from './Pages/Footer'
