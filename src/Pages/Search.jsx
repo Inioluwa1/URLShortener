@@ -6,11 +6,13 @@ import './Search.css'
 export default function Search() {
     const [search, setSearch] = useState("")
     const [searchedUrl, setsearchedUrl] = useState([])
+    const [clicked, setClicked] = useState(false)
 
   //Load stored URLs from localStorage when component mounts
   useEffect(()=> {
     const storedURL = JSON.parse(localStorage.getItem("shortenedURL")) || [];
     setsearchedUrl(storedURL)
+    setClicked(false)
   }, [])
 
   //save updatedURL to localstorage
@@ -22,6 +24,7 @@ export default function Search() {
   const handleshortening = async () => {
     if(!search.trim()) {
       alert("Link cannot be empty nor invalid format")
+      setSearch("")
       return;} //checks of the search is empty and stops from running if it is empty
 
     try{
@@ -61,11 +64,22 @@ export default function Search() {
         
     }
 
-    //handlig Deleting a URL
+    //handling Deleting a URL
     const handleDelete = (index) => {
       const updated = searchedUrl.filter((_,i) => i !== index )
       setsearchedUrl(updated);
       saveToLocalStorage(updated)
+    }
+
+    //handling copying to the clipboard
+    const copytoClipboard = (url) => {
+      navigator.clipboard.writeText(url)
+      .then(() => alert("Copied to Clipboard"))
+      .catch((error) => {
+        alert("Failed to copy")
+        console.error("Failed to copy;", error)
+      })
+      setClicked(true)
     }
 
   return (
@@ -82,7 +96,7 @@ export default function Search() {
           <p className='search'> {searchedUrl.oldURL} </p>
           <div className='searchandbutton'>
           <p> {searchedUrl.newURL} </p>
-          <button className='copy'> Copy </button>
+          <button className={clicked? "copied" : "copy"} onClick={() => copytoClipboard(searchedUrl.newURL)}> {clicked? "copied" : "copy"} </button>
           <MdDeleteForever size={34} onClick={() => handleDelete(index)} className='delete' />
         </div>
       </div>

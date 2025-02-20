@@ -9,7 +9,7 @@ export default function Main() {
         <p> Build your brand's recognition and get detailed insights on how your links are performing </p>
         <button> Get Started </button>
       </div>
-      <img src='/public/assets/illustration-working.svg' alt='Working Image' className='WorkingImage' />
+      <img src='assets/illustration-working.svg' alt='Working Image' className='WorkingImage' />
     </div>
   )
 }
