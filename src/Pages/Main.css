@@ -55,6 +55,9 @@
         width: 100%;
         overflow: hidden;
     }
+    .WorkingImage.push{
+        margin-top: 200px;
+    }
     .HeaderandText{
         width: 100%;
         display: flex;
@@ -77,6 +80,7 @@
         width: 50%;
         padding: 5% 0;
         font-size: 1.4rem;
+        margin-bottom: 5%;
     }
 
 }

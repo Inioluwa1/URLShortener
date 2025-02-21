@@ -77,6 +77,8 @@
 .search{
     width: 58%;
     /* border: 3px solid; */
+    overflow-wrap: break-word;
+    padding: 0 1%;
 }
 .searchandbutton{
     display: flex;
@@ -178,9 +180,10 @@
         margin-top: 5%;
     }
     .search{
-        border: 3px solid;
+        /* border: 3px solid; */
         overflow-wrap: break-word;
         width: 100%;
+        padding: 0 1%;
     }
     .searchandbutton{
         flex-direction: column;

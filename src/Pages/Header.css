@@ -6,16 +6,40 @@
     align-items: center;
     /* border: 2px solid blue; */
 }
+.shortly{
+    /* border: 3px solid; */
+    width: 20%;
+}
+
+.hamburger{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle{
+    color: black;
+    border: none;
+    background-color: white;
+}
 .linkcontainer h2{
     cursor: pointer;
     color: rgb(191, 191, 191);
 }
-
+.all-links{
+    width: 100%;
+    /* border: 3px solid; */
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+}
 .links{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50% 
+    width: 30%;
+    /* border: 3px solid; */
 }
 .links img {
     width: 20%;
@@ -31,6 +55,7 @@
     align-items: center;
     width: 20%;
     text-transform: capitalize;
+    /* border: 3px solid; */
 }
 
 .checkin h2:hover{
@@ -40,4 +65,44 @@
     border-radius: 40px;
     width: 50%;
     text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+    .hamburger{
+        display: block;
+    }
+
+    .all-links{
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 3px solid; */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        background-color: white;
+
+    }
+    .all-links.show{
+        display: flex;
+    }
+
+    .links{
+        flex-direction: column;
+        width: 100%;
+    }
+    .links h2{
+        margin-bottom: 2%;
+    }
+    .checkin{
+        flex-direction: column;
+        width: 100%;
+    }
+    .checkin h2{
+        margin-bottom: 2%;
+    }
 }
